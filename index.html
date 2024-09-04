@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fomulário de Contato</title>
+</head>
+<body>
+    <main>
+        <form action="https://api.staticforms.xyz/submit" method="post">
+            <!-- Tags de configuração -->
+            <input type="text" name="honeypot" style="display:none"><!-- Tag responsavel por proteger contra spam -->
+            <input type="hidden" name="accessKey" value="aaaaaaaa-bbbb-cccc-dddd-eeee6666kkkk"><!-- Tag onde se colocar a chave de acesso -->
+            <input type="hidden" name="redirectTo" value="https://example.com/contact/success"><!-- Tag de redireonamento de página -->
+            <!-- Tags que aparecem no formulário -->
+            <label>Nome</label>
+            <input type="text" name="name" required/>
+            <label>E-mail</label>
+            <input type="text" name="email" required/>
+            <label>Mensagem</label>
+            <textarea name="message"></textarea>            
+            <input type="submit" value="Submit" />
+        </form>
+    </main>
+</body>
+</html>
