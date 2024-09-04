@@ -3,23 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Fomulário de Contato</title>
 </head>
 <body>
     <main>
+        <h1>Contato</h1>
         <form action="https://api.staticforms.xyz/submit" method="post">
             <!-- Tags de configuração -->
             <input type="text" name="honeypot" style="display:none"><!-- Tag responsavel por proteger contra spam -->
             <input type="hidden" name="accessKey" value="aaaaaaaa-bbbb-cccc-dddd-eeee6666kkkk"><!-- Tag onde se colocar a chave de acesso -->
-            <input type="hidden" name="redirectTo" value="https://example.com/contact/success"><!-- Tag de redireonamento de página -->
+            <input type="hidden" name="redirectTo" value="http://127.0.0.1:5500/obrigado.html"><!-- Tag de redireonamento de página -->
             <!-- Tags que aparecem no formulário -->
             <label>Nome</label>
-            <input type="text" name="name" required/>
+            <input type="text" name="name" required autocomplete="off" class="entradas"/>
             <label>E-mail</label>
-            <input type="text" name="email" required/>
+            <input type="text" name="email" required autocomplete="off" class="entradas"/>
             <label>Mensagem</label>
-            <textarea name="message"></textarea>            
-            <input type="submit" value="Submit" />
+            <textarea name="message"></textarea>
+            <div>
+                <input type="submit" value="Submit"/>
+            </div>            
         </form>
     </main>
 </body>
