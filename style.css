@@ -4,7 +4,6 @@
     --cor-primaria: #151515;
     --cor-secundaria: #EEEEEE;
     --cor-terciaria: #4E31AA;
-    --cor-hover: #4E31AA;
 
     --fonte-primaria: 'Krona One', sans-serif;
     --fonte-secundaria: 'Montserrat', sans-serif;
@@ -12,26 +11,30 @@
 
 body{
     background: var(--cor-primaria);
-    padding: 90px;
-    height: auto;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 main{
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 32px;
 }
 
-.titulo{
+h1{
     font-family: var(--fonte-primaria);
     font-size: 32px;
     color: var(--cor-secundaria);
 }
 
 form{
-    width: 40%;
     display: flex;
     flex-direction: column;
+    width: 600px;
     gap: 20px;
 }
 
@@ -41,23 +44,18 @@ label{
     color: var(--cor-secundaria);
 }
 
-.entradas{
+input{
     font-family: var(--fonte-secundaria);
     font-weight: 400;
     font-size: 16px;
-    padding: 5px;
     height: 30px;
+    padding: 5px;
     border-radius: 5px;
     outline: none;
     border: 2px solid var(--cor-terciaria);
     background: var(--cor-primaria);
     color: var(--cor-secundaria);
 }
-
-.entradas:focus {
-    background-color: var(--cor-primaria);
-}
-
 
 textarea{
     font-family: var(--fonte-secundaria);
@@ -73,26 +71,62 @@ textarea{
     color: var(--cor-secundaria);
 }
 
-.container__botao{
+div{
     display: flex;
     justify-content: center;
 }
 
-.botao{
+div input{
     font-family: var(--fonte-secundaria);
     font-weight: 700;
-    font-size: 25px;
+    font-size: 22px;
     padding: 5px;
     width: 50%;
     height: 50px;
-    background: var(--cor-primaria);
-    color: var(--cor-secundaria);
-    border: 2px solid var(--cor-terciaria);
-    border-radius: 5px;
-    outline: none;
     cursor: pointer;
 }
 
-.botao:hover{
+div input:hover{
     background: var(--cor-terciaria);
+}
+
+.conteudo{
+    display: block;
+    padding: 45px;
+    width: 40%;
+    background: var(--cor-terciaria);
+    border-radius: 30px;
+    box-shadow: #2b2a2a 10px 12px;
+}
+
+p{
+    font-family: var(--fonte-secundaria);
+    font-weight: 400;
+    font-size: 22px;
+    color: var(--cor-secundaria);
+}
+
+a{
+    font-family: var(--fonte-secundaria);
+    font-weight: 600;
+    font-size: 22px;
+    color: var(--cor-secundaria);
+    padding: 5px;
+}
+
+@media (max-width: 800px){
+    form{
+        width: 300px;
+        gap: 15px;
+    }
+    input{
+        height: 15px;
+    }
+    label{
+        font-size: 25px;
+    }
+    div input{
+        width: 35%;
+        font-size: 18px;
+    }
 }
